@@ -1,0 +1,35 @@
+:root {
+    /* -- Fonts --*/
+    // COLORS
+    --clr-dark-400: #000000;
+    --clr-orange-300: #c7a160;
+    --clr-orange-500: #938263;
+    --clr-footer-text: #a7a196;
+    --clr-orange-400: #ffc24c;
+    --clr-light-400: hsla(1, 1%, 100%, 1);
+    --ff-angelus: 'DX Angelus Mediaval';
+    --ff-intro: 'Intro';
+}
+
+$container-width: rem(1670);
+$cont-padding: clamp(rem(15), vw(20), rem(20));
+$media-hd: 120em;
+
+
+.main-container {
+  padding: 0 $cont-padding;
+  max-width: calc($container-width + $cont-padding);
+  margin-inline: auto;
+  width: 100%;
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  font-family: var(--ff-angelus);
+  align-items: center;
+  text-transform: uppercase;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+

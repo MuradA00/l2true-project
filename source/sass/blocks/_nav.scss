@@ -1,0 +1,48 @@
+.nav {
+  &__list {
+    @include dfc;
+    grid-gap: clamp(rem(50), vw(90), rem(90));
+    justify-content: space-between;
+  }
+  &__link {
+    font-family: var(--ff-angelus);
+    text-transform: uppercase;
+    font-size: 1.125rem;
+    font-weight: 400;
+    line-height: 1.33;
+    transition: all 400ms ease;
+    &:hover {
+      color: var(--clr-orange-400);
+    }
+  }
+}
+
+@include max-width($media-hd) {
+  .nav {
+    &__link {
+      font-size: rem(16);
+    }
+    &__list {
+      grid-gap: rem(70);
+    }
+  }
+}
+
+@include max-width(85.375em) {
+  .nav {
+    &__list {
+      grid-gap: 2rem;
+    }
+    &__link {
+      font-size: rem(14);
+    }
+  }
+}
+
+@include max-width(75em) {
+  .header {
+    &__navigation {
+      display: none;
+    }
+  }
+}

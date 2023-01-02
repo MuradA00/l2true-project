@@ -1,0 +1,99 @@
+.header {
+  position: absolute;
+  top: rem(5);
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  &__body {
+    @include dfc;
+    justify-content: space-between;
+  }
+  &__options {
+    @include dfc;
+    grid-gap: rem(52);
+  }
+  &__logo-wrapper {
+    padding: rem(15) rem(52) rem(5) rem(60);
+    @include dfc;
+    justify-content: center;
+    grid-gap: rem(27);
+    position: relative;
+    &::before {
+      @include psevdo;
+      width: 100%;
+      height: 100%;
+      background-image: url(../../img/header/logo-overlay.png);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      opacity: .15;
+      z-index: -1;
+    }
+  }
+  &__logo-name {
+    text-transform: uppercase;
+    font-family: var(--ff-intro);
+    font-size: clamp(rem(5), vw(13), rem(13));
+    margin-bottom: rem(3);
+    font-weight: 400;
+    color: #ccc;
+  }
+  &__logo-mode {
+    font-family: var(--ff-angelus);
+    font-size: clamp(rem(14), vw(21), 1.3125rem);
+    font-weight: 400;
+    // margin-bottom: rem(10);
+    text-transform: uppercase;
+  }
+  &__logo-online {
+    font-family: var(--ff-intro);
+    font-size: clamp(rem(5), vw(13), rem(13));
+    color: #ccc;
+    span {
+      color: var(--clr-orange-300);
+    }
+  }
+  &__login {
+    color: var(--clr-dark-400);
+    font-size: rem(14);
+    font-family: var(--ff-angelus);
+    text-transform: uppercase;
+    padding: rem(18);
+    min-width: rem(184);
+    background-image: url('../../img/btn/6-layers.png');
+  }
+  &__lang {
+    cursor: pointer;
+  }
+  &__lang-selected {
+    @include dfc;
+    grid-gap: rem(7);
+    &:hover .header__lang-arrow{
+      transform: scaleY(-1);
+    }
+  }
+  &__lang-arrow {
+    transition: all 400ms ease;
+  }
+}
+
+@include max-width($media-hd) {
+  .header {
+    top: 1rem;
+    &__logo-icon {
+      max-width: rem(30);
+    }
+    &__logo-wrapper {
+      grid-gap: rem(10);
+      padding: rem(10) rem(30);
+    }
+    &__logo-name, &__logo-online {
+      font-size: rem(10);
+    }
+    &__logo-mode {
+      font-size: rem(14);
+    }
+    &__options {
+      grid-gap: 1rem;
+    }
+  }
+}
