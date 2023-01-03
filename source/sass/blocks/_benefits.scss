@@ -163,6 +163,17 @@
   }
 }
 
+@include min-width(120.0625em) {
+  .benefits-row {
+    &__icon {
+      &::before {
+        width: 150%;
+        left: -2.5rem;
+      }
+    }
+  }
+}
+
 @include max-width($media-hd) {
   .benefits-row {
     &__icon {
@@ -171,6 +182,77 @@
     }
     &__name {
       font-size: 1rem;
+    }
+  }
+}
+
+@include max-width(75em) {
+  .benefits {
+    &__inner {
+      grid-gap: 2.5rem 1rem;
+      flex-wrap: wrap;
+    }
+    &__column-title {
+      font-size: rem(24);
+    }
+    &__column-descr {
+      p {
+        font-size: rem(12);
+      }
+    }
+    &__column {
+      flex: 1 1 45%;
+    }
+  }
+}
+
+@include max-width(48em) {
+  .benefits {
+    &__column {
+      min-height: rem(250);
+      &::before {
+        height: 100%;
+      }
+    }
+    &__inner {
+      grid-gap: 1.9rem 1rem;
+    }
+    &__column-descr {
+      p {
+        font-size: rem(10);
+      }
+    }
+    &__column-wrapper {
+      padding: 1rem 1rem 1.75rem;
+    }
+    &__column-date {
+      margin-bottom: rem(5);
+      font-size: .8375rem;
+    }
+    &__column-title {
+      margin-bottom: .5rem;
+      font-size: 1rem;
+    }
+    &__more {
+      font-size: rem(12);
+      bottom: -1.3rem;
+      min-width: 10rem;
+      min-height: 2.5rem;
+    }
+  }
+}
+
+@include max-width(34.375em) {
+  .benefits {
+    &__inner {
+      flex-direction: column;
+    }
+    &__item {
+      flex: 1 1 100%;
+    }
+    &__column {
+      min-height: rem(225);
+      background-position: top;
     }
   }
 }
