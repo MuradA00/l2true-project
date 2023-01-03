@@ -1,8 +1,54 @@
 .beta {
-  background-image: url('../../img/beta/beta-bg.png');
+  // background-image: url('../../img/beta/beta-bg.png');
   background-size: 100% 100%;
-  height: 50vh;
+
   background-repeat: no-repeat;
   background-position: center;
+  position: relative;
+  background-color: #2e2729;
+  &__body {
+    max-width: rem(870);
+    margin-left: auto;
+    min-height: rem(680);
+    display: grid;
+    align-items: center;
+  }
+  &__title {
+    font-size: rem(107);
+    margin-bottom: rem(34);
+  }
+  &__descr {
+    p {
+      font-family: var(--ff-intro);
+      font-size: rem(20);
+      &:nth-child(1) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
 
+@include max-width($media-hd) {
+  .beta {
+    &__title {
+      font-size: rem(64);
+    }
+  }
+}
+
+@include max-width(48em) {
+  .beta {
+    &__body {
+      min-height: rem(450);
+    }
+    &__title {
+      font-size: rem(25);
+      text-align: center;
+    }
+    &__descr {
+       p {
+        font-size: 1rem;
+       }
+    }
+  }
 }

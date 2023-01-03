@@ -81,7 +81,7 @@
       font-size: 1.375rem;
     }
     &__info {
-      margin-bottom: rem(60);
+      margin-bottom: rem(30);
       p {
         font-size: 1.125rem;
       }
@@ -94,6 +94,24 @@
     &__logo {
       width: 35rem;
       top: 2.7rem;
+    }
+    margin-bottom: 7rem;
+  }
+}
+
+@include max-width(37.5em) {
+  .home {
+    &__logo {
+      top: 5rem;
+      width: rem(360);
+    }
+    &__content {
+      margin-top: rem(250);
+    }
+    &__info {
+      p {
+        font-size: rem(14);
+      }
     }
   }
 }

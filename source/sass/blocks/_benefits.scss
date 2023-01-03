@@ -1,4 +1,5 @@
 .benefits {
+  margin-bottom: rem(100);
   &__body {
     display: flex;
     flex-direction: column;
@@ -155,9 +156,10 @@
   .home {
     &__content {
       &::before {
+        top: 0;
         background-size: 100% 100%;
         width: 100%;
-        height: 100%;
+        height: 50%;
       }
     }
   }
@@ -214,6 +216,9 @@
         height: 100%;
       }
     }
+    &__body {
+      margin-bottom: 5rem;
+    }
     &__inner {
       grid-gap: 1.9rem 1rem;
     }
@@ -244,6 +249,9 @@
 
 @include max-width(34.375em) {
   .benefits {
+    &__container {
+      padding: 0 rem(20);
+    }
     &__inner {
       flex-direction: column;
     }
@@ -253,6 +261,25 @@
     &__column {
       min-height: rem(225);
       background-position: top;
+    }
+    &__title {
+      margin-bottom: 4rem;
+    }
+  }
+}
+
+@include max-width(36.875em) {
+  .benefits-row {
+    padding: 0 1.5rem;
+    justify-content: space-evenly;
+    &__icon {
+      width: 5rem;
+      height: 5rem;
+      &::before {
+        width: 160%;
+        top: -.2rem;
+        left: -1.475rem;
+      }
     }
   }
 }

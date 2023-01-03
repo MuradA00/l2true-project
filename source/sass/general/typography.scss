@@ -2,6 +2,7 @@
   font-size: clamp(rem(32), vw(52), rem(52));
   font-weight: 400;
   letter-spacing: rem(0.97);
+  font-family: var(--ff-angelus);
   text-transform: uppercase;
   color: var(--clr-light-400);
   @include max-width($media-hd) {

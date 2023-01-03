@@ -7,17 +7,17 @@
 
 @font-face {
   font-family: 'Intro';
-  src: url("../../fonts/Intro.woff") format("woff"),
-  url("../../fonts/Intro.otf") format("opentype");
-  font-weight: 500;
+  src: url("../../fonts/intro_regular.woff") format("woff"),
+  url("../../fonts/intro_regular.ttf") format("ttf");
+  font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Intro';
-  src: url("../../fonts/Intro-Inline.woff") format("woff"),
-  url("../../fonts/Intro-Inline.otf") format("opentype");
-  font-weight: 400;
+  src: url("../../fonts/intro_bold.ttf") format("woff"),
+url("../../fonts/intro_bold.ttf") format("ttf");
+  font-weight: 700;
   font-style: normal;
 }
 

@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('../../img/home/body-bg.jpg');
-  background-size: auto auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
   color: var(--clr-light-400);
@@ -18,7 +18,13 @@ body {
   overflow-x: hidden;
   flex-direction: column;
   @include min-width(156.25em) {
-    background-size: 100% auto;
+    background-size: cover;
+  }
+  @include max-width(48em) {
+    background-position: rem(-450);
+  }
+  @include max-width(37.5em) {
+    background-position: rem(-550);
   }
 }
 
