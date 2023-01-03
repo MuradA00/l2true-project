@@ -1,6 +1,6 @@
 .header {
   position: absolute;
-  top: rem(0);
+  top: 0rem;
   left: 0;
   width: 100%;
   z-index: 1000;
@@ -98,7 +98,7 @@
 
 @include max-width($media-hd) {
   .header {
-    top: rem(0);
+    top: .5rem;
     &__logo-icon {
       max-width: rem(40);
     }
@@ -127,5 +127,11 @@
     &__burger {
       display: grid;
     }
+  }
+}
+
+@include min-width(162.6em) {
+  .header {
+    top: .8rem;
   }
 }
