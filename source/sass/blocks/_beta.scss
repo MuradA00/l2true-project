@@ -46,6 +46,8 @@
       text-align: center;
     }
     &__descr {
+      max-width: rem(350);
+      margin-inline: auto;
        p {
         font-size: 1rem;
        }

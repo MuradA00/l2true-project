@@ -127,6 +127,36 @@
     &__burger {
       display: grid;
     }
+    &__wrapper-right {
+      flex-direction: row-reverse;
+    }
+    &__lang-flag {
+      max-width: rem(35);
+    }
+    &__lang-arrow {
+      max-width: rem(15);
+    }
+  }
+}
+
+@include max-width($tab-media) {
+  .header {
+    top: 1rem;
+    &__logo-wrapper {
+      padding: .325rem 1.5rem;
+    }
+    &__logo-mode {
+      font-size: rem(10);
+    }
+    &__logo-icon {
+      max-width: rem(30);
+    }
+  }
+}
+
+@include max-width(34.375em) {
+  .header {
+    top: 1.5rem;
   }
 }
 

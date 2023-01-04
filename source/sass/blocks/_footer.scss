@@ -146,7 +146,13 @@
   .footer-grid {
     &__item {
       width: rem(55);
-      height: rem(15);
+      height: rem(20);
+      &:nth-child(1),
+      &:nth-child(2) {
+        &::before {
+          height: 335%;
+        }
+      }
     }
   }
   .footer-list {
@@ -160,14 +166,9 @@
   .footer {
     padding: 3.5rem 0;
     &__body {
-      // justify-content: center;
-      // flex-direction: column;
+
     }
     &__links {
-      // justify-content: center;
-      .footer__column {
-
-      }
     }
     &__column {
       &--grid {
@@ -186,7 +187,13 @@
   }
 }
 
-@include max-width(34.375em) {
+@include max-width(37.5em) {
+  .footer-list {
+    &__link {
+      display: block;
+      text-align: center;
+    }
+  }
   .footer {
     &__body {
       flex-direction: column;
@@ -212,9 +219,6 @@
     &__links {
       grid-gap: 2rem;
       justify-content: center;
-      .footer__column {
-
-      }
     }
     &__column-title {
       text-align: center;

@@ -5,6 +5,7 @@
   font-family: var(--ff-angelus);
   text-transform: uppercase;
   color: var(--clr-light-400);
+  letter-spacing: 0.65px !important;
   @include max-width($media-hd) {
     font-size: clamp(rem(26), vw(44), rem(44));
   }

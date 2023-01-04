@@ -14,6 +14,7 @@
 $container-width: rem(1670);
 $cont-padding: clamp(rem(15), vw(20), rem(20));
 $media-hd: 120em;
+$tab-media: 68.75em;
 
 
 .main-container {
@@ -21,6 +22,9 @@ $media-hd: 120em;
   max-width: calc($container-width + $cont-padding);
   margin-inline: auto;
   width: 100%;
+  @include max-width($tab-media) {
+    max-width: calc(rem(785) + $cont-padding);
+  }
 }
 
 .btn {

@@ -63,6 +63,7 @@
     &__logo {
       width: 37.5rem;
     }
+
   }
 }
 
@@ -95,6 +96,20 @@
       width: 35rem;
       top: 2.7rem;
     }
+    &__content {
+      &::before {
+        height: 80% !important;
+      }
+    }
+    &__info {
+      margin-inline: auto;
+      max-width: rem(370);
+    }
+    &__start {
+      min-width: rem(250);
+      min-height: 4.25rem;
+      font-size: 1.125rem;
+    }
     margin-bottom: 7rem;
   }
 }
@@ -106,11 +121,11 @@
       width: rem(360);
     }
     &__content {
-      margin-top: rem(250);
+      margin-top: rem(300);
     }
     &__info {
       p {
-        font-size: rem(14);
+        font-size: rem(16);
       }
     }
   }

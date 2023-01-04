@@ -1,0 +1,125 @@
+.description {
+  &__heading {
+    @include dfc;
+    grid-gap: rem(30);
+    text-align: center;
+    margin-bottom: rem(40);
+  }
+  &__banner {
+    margin-bottom: rem(40);
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: rem(25);
+  }
+  &__body {
+    border-radius: 15px;
+    background-color: #221b24;
+  }
+  &__info {
+    padding: 0 rem(28);
+  }
+  &__heading-icon {
+    max-width: rem(96);
+  }
+  &__heading-text {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 1.125rem;
+    font-family: var(--ff-angelus);
+    font-size: rem(35);
+    line-height: 50%;
+    color: var(--clr-light-400);
+    text-transform: uppercase;
+    span {
+      color: inherit;
+      font-size: rem(22);
+      font-family: var(--ff-intro);
+      text-transform: uppercase;
+    }
+  }
+  &__heading-block {
+    padding: rem(23.3) rem(28);
+    background-color: #322d33;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    grid-gap: rem(45);
+    margin-bottom: rem(22);
+  }
+  &__notif {
+    margin-bottom: rem(52);
+  }
+  &__data-heading {
+    color: #d2b08a;
+    font-family: var(--ff-intro);
+    font-size: rem(25);
+    margin-bottom: rem(40);
+  }
+  &__data-text {
+    p {
+      font-family: var(--ff-intro);
+      font-size: 1.25rem;
+      color: #606061;
+      line-height: 1.6;
+    }
+  }
+  &__inner {
+    min-height: rem(1984);
+  }
+  &__notif-icon {
+    display: flex;
+    align-items: center;
+    grid-gap: rem(24);
+    background-color: #72271f;
+    border-radius: 15px;
+    padding: rem(18.5) rem(20);
+  }
+  &__notif-text {
+    color: #f2caca;
+    font-family: var(--ff-intro);
+    font-size: 1rem;
+  }
+}
+
+.description-body {
+  background-position: top;
+  position: relative;
+  .home {
+    margin-bottom: rem(50);
+    &__title {
+      display: none;
+    }
+    &__content {
+      margin-top: 25rem;
+      &::before {
+        display: none;
+      }
+    }
+    &__info {
+      display: none;
+    }
+  }
+}
+
+@include min-width(120.0625em) {
+  .description-body {
+    .home {
+      &__content {
+        margin-top: 33rem;
+      }
+    }
+  }
+  .description {
+    &__heading {
+      margin-bottom: rem(80);
+    }
+  }
+}
+
+@include max-width(37.5em) {
+  .home__content {
+    margin-top: 18rem !important;
+  }
+}
