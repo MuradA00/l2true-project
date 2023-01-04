@@ -28,9 +28,6 @@
     bottom: 2rem;
     width: 100%;
     text-align: center;
-    &--large {
-
-    }
   }
   &__help {
     span {
@@ -68,6 +65,9 @@
 .news-body {
   .home {
     margin-bottom: rem(55);
+  }
+  @include max-width(31.25em) {
+    background-position: left;
   }
 }
 

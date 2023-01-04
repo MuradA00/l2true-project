@@ -6,7 +6,7 @@
     margin-bottom: rem(40);
   }
   &__banner {
-    margin-bottom: rem(40);
+    margin-bottom: rem(45);
   }
   &__inner {
     display: grid;
@@ -55,7 +55,7 @@
     color: #d2b08a;
     font-family: var(--ff-intro);
     font-size: rem(25);
-    margin-bottom: rem(40);
+    margin-bottom: rem(55);
   }
   &__data-text {
     p {
@@ -114,6 +114,14 @@
   .description {
     &__heading {
       margin-bottom: rem(80);
+    }
+  }
+}
+
+@include max-width(48em) {
+  .description {
+    &__heading {
+
     }
   }
 }

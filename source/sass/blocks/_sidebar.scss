@@ -3,11 +3,11 @@
   border-radius: 15px;
   &__body {
     height: 100%;
-    padding: rem(30) rem(38);
+    padding: rem(30) rem(35) rem(18) rem(5);
   }
   &__icon {
-    width: rem(80);
-    height: rem(80);
+    // width: rem(80);
+    // height: rem(80);
     &::before {
       top: rem(-8);
       width: 170%;
@@ -23,8 +23,8 @@
 @include max-width(85.375em) {
   .sidebar {
     &__icon {
-      width: 3.5rem;
-      height: 3.5rem;
+      // width: 3.5rem;
+      // height: 3.5rem;
     }
   }
   .sidebar-column {
@@ -37,13 +37,13 @@
 .sidebar-column {
   display: flex;
   flex-direction: column;
-  grid-gap: rem(50);
+  grid-gap: rem(0);
   &__item {
     position: relative;
     &:not(:last-child) {
       &::after {
         @include psevdo;
-        bottom: rem(-30);
+        bottom: rem(0);
         background-image: url('../../img/description/toggle-bottom-patter.png');
         background-size: 100% 100%;
         width: calc(100% + rem(60));
@@ -56,7 +56,7 @@
   &__icon {
     display: flex;
     align-items: center;
-    grid-gap: rem(35);
+    grid-gap: rem(0);
   }
 
   &__info {
@@ -126,6 +126,11 @@
       transform: rotate(-90deg);
     }
   }
+  .sidebar {
+    &__body {
+      padding: 1rem;
+    }
+  }
   .sidebar-column {
     &__icon {
       position: relative;
@@ -161,6 +166,17 @@
 
 @include max-width(48em) {
   .description {
+    &__heading {
+      flex-direction: column;
+      .second-arrow {
+        display: none;
+      }
+      img {
+        &:nth-child(1) {
+          display: none;
+        }
+      }
+    }
     &__info {
       padding: 0 1rem 1rem;
     }
@@ -170,17 +186,32 @@
       flex-direction: column-reverse;
     }
   }
+  .sidebar {
+    &__body {
+      padding: 1rem 0rem !important;
+    }
+  }
+  .show-hidden-info {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) translateX(-50%) !important;
+  }
   .sidebar-column {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    &__info {
+      left: 50%;
+      top: -25%;
+      transform: translateX(-50%) translateY(10px);
+    }
     &__item {
       &::after {
         display: none;
       }
     }
     &__icon {
-      width: 1.5rem;
-      height: 1.5rem;
+
     }
   }
 }
@@ -191,9 +222,6 @@
       padding: 2rem;
     }
     &__icon {
-      width: 2.5rem;
-      height: 2.5rem;
-      outline: 2px solid rgba(109,140,186,.25);
     }
   }
   .description {

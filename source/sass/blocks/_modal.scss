@@ -197,9 +197,6 @@
     &__row-item {
       max-width: rem(80);
     }
-    &__req-row {
-
-    }
     &__req-row-item {
 
       &:nth-child(1) {
@@ -282,7 +279,7 @@
     &__req-row-item {
       font-size: rem(12);
       &:nth-child(1) {
-        flex: 0 1 auto;
+        flex: 0 1 rem(80);
         margin-right: 0;
       }
       &:nth-child(2) {
@@ -294,6 +291,17 @@
         flex: 0 1 auto;
         margin-left: 0;
       }
+    }
+  }
+}
+
+@include max-width(29.375em) {
+  .modal {
+    &__req-row {
+      padding: .5rem .85rem;
+    }
+    &__req-heading-item {
+      font-size: rem(12);
     }
   }
 }
