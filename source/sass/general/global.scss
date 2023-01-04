@@ -36,7 +36,8 @@ body {
     height: 100%;
     z-index: -1;
     display: none;
-    @include max-width(48em) {
+    transition: all 400ms ease;
+    @include max-width(75em) {
       display: block;
     }
   }

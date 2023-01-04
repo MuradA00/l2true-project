@@ -159,16 +159,36 @@
   visibility: visible;
 }
 
+@include max-width(48em) {
+  .description {
+    &__info {
+      padding: 0 1rem 1rem;
+    }
+    &__inner {
+      min-height: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+  .sidebar-column {
+    flex-direction: row;
+    flex-wrap: wrap;
+    &__item {
+      &::after {
+        display: none;
+      }
+    }
+    &__icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
 @include max-width(37.5em) {
   .sidebar {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    z-index: 1000;
     &__body {
-
-      padding: 1rem 1.5rem;
+      padding: 2rem;
     }
     &__icon {
       width: 2.5rem;
@@ -178,12 +198,13 @@
   }
   .description {
     &__inner {
-      display: block;
+
     }
   }
-  .sidebar-column {
-    justify-content: center;
-    flex-direction: row;
-    grid-gap: 2rem;
-  }
+}
+
+.active-sidebar {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
 }
