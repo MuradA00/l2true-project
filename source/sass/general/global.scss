@@ -6,7 +6,7 @@ body {
   background-repeat: no-repeat;
   background-position: top;
   color: var(--clr-light-400);
-  background-color: var(--clr-adrk-400);
+  background-color: var(--clr-dark-400);
   width: 100%;
   position: relative;
   font-family: inherit;
@@ -48,6 +48,7 @@ html {
   width: 100%;
   font-family: var(--font-family);
   font-weight: 400;
+  background-color: var(--clr-dark-400);
   font-size: 16px;
   overflow-x: hidden;
   line-height: normal;

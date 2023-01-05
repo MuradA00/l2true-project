@@ -5,7 +5,9 @@ const mainSlider = new Swiper('.beta__wrapper', {
     nextEl: '.beta-control__btn--next',
     prevEl: '.beta-control__btn--prev'
   },
+
   pagination: {
-    el: '.beta-control__bullets'
+    el: '.beta-control__bullets',
+    clickable: true
   }
 });

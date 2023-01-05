@@ -1,14 +1,20 @@
 .home {
   margin-top: rem(28);
-  margin-bottom: rem(137);
+  margin-bottom: rem(120);
   &__logo {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    transition: all 300ms ease;
+    &:hover {
+      transform: translateX(-50%) scale(1.04);
+    }
   }
   &__title {
     margin-bottom: rem(27);
+    z-index: 10;
+    position: relative;
   }
   &__body {
     @include dfc;
@@ -27,10 +33,12 @@
       width: rem(1125);
       height: rem(312);
       background-image: url('../../img/home/pseudo-content.png');
-      z-index: -1;
+      z-index: 5;
     }
   }
   &__info {
+    position: relative;
+    z-index: 10;
     max-width: rem(703);
     margin-inline: auto;
     margin-bottom: rem(125);
@@ -41,6 +49,8 @@
     }
   }
   &__button {
+    position: relative;
+    z-index: 10;
     display: grid;
     justify-content: center;
   }

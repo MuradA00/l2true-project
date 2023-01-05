@@ -18,7 +18,7 @@
     background-color: #221b24;
   }
   &__info {
-    padding: 0 rem(28);
+    padding: 0 rem(28) rem(20);
   }
   &__heading-icon {
     max-width: rem(96);
@@ -65,9 +65,6 @@
       line-height: 1.6;
     }
   }
-  &__inner {
-    min-height: rem(1984);
-  }
   &__notif-icon {
     display: flex;
     align-items: center;
@@ -86,6 +83,18 @@
 .description-body {
   background-position: top;
   position: relative;
+  background-size: auto;
+  @include max-width($media-hd) {
+      background-size: cover;
+      .header {
+        top: 0rem;
+      }
+  }
+  @include max-width($tab-media) {
+    .header {
+      top: 1rem !important;
+    }
+  }
   .home {
     margin-bottom: rem(50);
     &__title {

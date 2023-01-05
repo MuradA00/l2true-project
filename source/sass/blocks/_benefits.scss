@@ -107,6 +107,10 @@
     border-radius: 50%;
     position: relative;
     margin-bottom: rem(27);
+    transition: all 400ms ease;
+    &:hover {
+      transform: scale(1.1);
+    }
     &::before {
       @include psevdo;
       top: rem(-5);

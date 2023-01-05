@@ -65,6 +65,19 @@
 .news-body {
   .home {
     margin-bottom: rem(55);
+    &__title, .home__info {
+      display: none;
+    }
+    &__content {
+      &::before {
+        display: none;
+      }
+    }
+  }
+  @include min-width($media-hd) {
+    body {
+      background-size: auto;
+    }
   }
   @include max-width(31.25em) {
     background-position: left;

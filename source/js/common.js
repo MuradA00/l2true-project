@@ -21,7 +21,7 @@ modalTriggers.forEach(trigger => {
 })
 
 sidebarToggleButton.forEach(btn => {
-  btn.addEventListener('click', (e) => {
+  btn.addEventListener('click', () => {
     btn.nextElementSibling.classList.toggle('show-hidden-info');
   })
 })
@@ -66,9 +66,10 @@ function setSpacing() {
   main.style.marginTop = `${headersHeight}px`;
 }
 
-modalClose.addEventListener('click', closeModal);
 setSpacing();
 closeMenuByClick();
+modalClose.addEventListener('click', closeModal);
 burger.addEventListener('click', showMenu);
 closeIcon.addEventListener('click', closeMenu);
+
 

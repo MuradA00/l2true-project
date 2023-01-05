@@ -80,9 +80,29 @@
     padding: rem(18);
     min-width: rem(184);
     background-image: url('../../img/btn/6-layers.png');
+    transition: 400ms ease;
+    &:hover {
+      transform: translateY(5px);
+    }
   }
   &__lang {
     cursor: pointer;
+    position: relative;
+    &:hover .header__lang-hidden {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) translateY(0px);
+    }
+  }
+  &__lang-hidden {
+    min-width: rem(68);
+    position: absolute;
+    left: 50%;
+    z-index: 1000;
+    transition: all 400ms ease;
+    transform: translateX(-50%) translateY(-10px);
+    opacity: 0;
+    visibility: hidden;
   }
   &__lang-selected {
     @include dfc;
@@ -93,6 +113,16 @@
   }
   &__lang-arrow {
     transition: all 400ms ease;
+  }
+}
+
+.hidden-list {
+  padding-top: .5rem;
+  display: flex;
+  flex-direction: column;
+  grid-gap: .5rem;
+  &__item {
+    cursor: pointer;
   }
 }
 
@@ -128,7 +158,7 @@
       display: grid;
     }
     &__wrapper-right {
-      flex-direction: row-reverse;
+      flex-direction: row;
     }
     &__lang-flag {
       max-width: rem(35);
@@ -150,6 +180,14 @@
     }
     &__logo-icon {
       max-width: rem(30);
+    }
+  }
+}
+
+@include max-width($tab-media) {
+  .hidden-list {
+    &__item {
+      padding-left: .25rem;
     }
   }
 }
